@@ -11,7 +11,6 @@ function Header({
   backbtn = false,
   left = false,
   children,
-  ...props
 }: HeaderProps) {
   const navigate = useNavigate();
   const dispatch = useDispatch<AppDispatch>();

@@ -1,4 +1,4 @@
-import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { loadState } from "./storage";
 import axios, { AxiosError } from "axios";
 import { LoginResponce } from "../interfaces/auth.interface";
@@ -75,7 +75,7 @@ export const userSlice = createSlice({
   extraReducers: (builder) => {
     builder.addCase(
       login.fulfilled,
-      (state, action: PayloadAction<LoginResponce>) => {
+      (state, action) => {
         if (!action.payload) {
           return;
         }
@@ -91,7 +91,7 @@ export const userSlice = createSlice({
       }
       state.jwt = action.payload.token;
     });
-    builder.addCase(register.rejected, (state, action) => {
+    builder.addCase(register.rejected, (state) => {
       state.registerError = "Ошибка при регистрации";
     });
   },

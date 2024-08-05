@@ -2,8 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import Button from "../../components/Button/Button";
 import Input from "../../components/Input/Input";
 import styles from "./Login.module.css";
-import { FormEvent, useEffect, useState } from "react";
-import axios, { AxiosError } from "axios";
+import { FormEvent, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch, RootState } from "../../store/store";
 import { login, userActions } from "../../store/user.slice";
@@ -18,7 +17,6 @@ export type LoginForm = {
 };
 
 export function Login() {
-  const [error, setError] = useState<string | null>();
   const navigate = useNavigate();
   const dispatch = useDispatch<AppDispatch>();
   const {jwt, loginError} = useSelector((s: RootState) => s.user);

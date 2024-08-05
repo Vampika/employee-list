@@ -1,7 +1,6 @@
 import { Outlet, useLocation } from "react-router-dom";
 import styles from "./AuthLayout.module.css";
 import { useEffect } from "react";
-import cn from "classnames";
 
 export function AuthLayout() {
   const location = useLocation();

@@ -1,5 +1,5 @@
 import { useLoaderData } from "react-router-dom";
-import { User } from "../../interfaces/User.interface";
+import { User } from "../../interfaces/user.interface";
 import Header from "../../components/Header/Header";
 import styles from "./Profile.module.css";
 

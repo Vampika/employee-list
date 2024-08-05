@@ -4,7 +4,7 @@ import styles from "./List.module.css";
 import axios, { AxiosError } from "axios";
 import { TeamList } from "./TeamList/TeamList";
 import cn from "classnames";
-import { User } from "../../interfaces/User.interface";
+import { User } from "../../interfaces/user.interface";
 
 export function List() {
   const [users, setUsers] = useState<User[]>([]);

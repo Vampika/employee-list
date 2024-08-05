@@ -2,7 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import Button from "../../components/Button/Button";
 import Input from "../../components/Input/Input";
 import styles from "./Register.module.css";
-import { FormEvent, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch, RootState } from "../../store/store";
 import { register, userActions } from "../../store/user.slice";
@@ -39,12 +39,7 @@ export function Register() {
     }
   }, [jwt, navigate]);
 
-  const checkData = (data: {
-    name: string;
-    email: string;
-    password: string;
-    password_repeat: string;
-  }) => {
+  const checkData = (data: any) => {
     //Имя должно быть длинной больше 0
     if (data.name?.trim().length === 0) {
       isValid = false;
@@ -72,13 +67,13 @@ export function Register() {
     } else setFormValidState((state) => ({ ...state, password_repeat: true }));
   };
 
-  const submit = async (e: FormEvent) => {
+  const submit = async (e: any) => {
     e.preventDefault();
-    const formData = new FormData(e.target);
+	console.log(e);
+	const formData = new FormData(e.target);
     const formProps = Object.fromEntries(formData);
     isValid = true;
-    checkData(formProps);
-    console.log(isValid);
+    checkData({name: formProps.name, email: formProps.email, password: formProps.password, password_repeat: formProps.password_repeat});
 
     if (isValid) {
       dispatch(userActions.clearRegisterError());
