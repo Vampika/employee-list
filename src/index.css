@@ -1,0 +1,24 @@
+:root {
+	--font: 'Roboto', sans-serif;
+	--primary-color: #512689;
+	--gray-color: #F8F8F8;
+	--text-color: #151317;
+}
+
+body {
+	font-family: "Roboto", sans-serif;
+	padding: 0;
+	margin: 0;
+}
+
+* {
+	box-sizing: border-box;
+  }
+
+
+.container {
+	max-width: 1440px;
+	height: 100%;
+	position: relative;
+	margin: auto;
+}
