@@ -45,7 +45,7 @@
 
 @media screen and (max-width: 650px){
 	.header {
-		padding: 64px;
+		padding: 64px 20px;
 	}
 	.header-left {
 		align-items: center;

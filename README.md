@@ -3,7 +3,10 @@
 
 Используемое API: https://reqres.in/
 
+Готовое приложение можно посмотреть на versel: https://employee-list-liard-nu.vercel.app/
 
+Для входа на сайт используйте email: eve.holt@reqres.in и пароль: cityslicka
+Для успешной регистрации: eve.holt@reqres.in pistol
 
 ---
 
